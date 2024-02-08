@@ -116,20 +116,28 @@ const Example = () => {
     columns,
     data, //10,000 rows
     defaultDisplayColumn: { enableResizing: true },
-    enableBottomToolbar: false,
+    enableBottomToolbar: true,
     enableColumnResizing: true,
     enableColumnVirtualization: true,
     enableGlobalFilterModes: true,
-    enablePagination: false,
+    enablePagination: true,
     enableColumnPinning: true,
     enableRowNumbers: true,
     enableRowVirtualization: true,
-    muiTableContainerProps: { sx: { maxHeight: '600px' } },
+    // muiTableContainerProps: { sx: { maxHeight: '600px' } },
     onSortingChange: setSorting,
     state: { isLoading, sorting },
     rowVirtualizerInstanceRef, //optional
     rowVirtualizerOptions: { overscan: 5 }, //optionally customize the row virtualizer
     columnVirtualizerOptions: { overscan: 2 }, //optionally customize the column virtualizer
+    initialState: { pagination: { pageSize: 14, pageIndex: 0 } },
+    muiPaginationProps: {
+      color: 'primary',
+      shape: 'rounded',
+      showRowsPerPage: false,
+      variant: 'outlined',
+    },
+    paginationDisplayMode: 'pages',
   });
 
   return <MaterialReactTable table={table} />;
