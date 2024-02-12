@@ -1,0 +1,7 @@
+th:nth-child(3) .MuiCollapse-vertical,th:nth-child(4) .MuiCollapse-vertical,th:nth-child(5) .MuiCollapse-vertical {
+  display: none;
+}
+
+/* body{
+background: red;
+} */

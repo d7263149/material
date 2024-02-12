@@ -9,6 +9,7 @@ import {
 import { makeData, type Person } from './makeData';
 import { Box } from '@mui/material';
 import  data1  from "./json.json";
+import './main.css';
 const Example = () => {
 
 
@@ -66,25 +67,32 @@ const colors = ['red','green', 'blue', 'black','purple'];
       {
         accessorKey: 'post_title',
         header: 'Name',
-        filterVariant: 'text', // default
+        filterFn: 'includesString',
+
+
+
         // size: 150,
       },
       {
         accessorKey: 'field_phone',
         header: 'Phone',
-        filterVariant: 'text', // default
+        // filterVariant: 'text', // default
         // size: 150,
       },
       {
         accessorKey: 'field_fax',
         header: 'Fax',
-        filterVariant: 'text', // default
+        // filterVariant: 'text', // default
         // size: 150,
       },
       {
         accessorKey: 'field_website',
         header: 'URL',
-        filterVariant: 'text', // default
+        showColumnFilters: false,
+        enableColumnFilterModes:false,
+        enableFilters:false,
+
+        // filterVariant: 'text', // default
         // size: 150,
       },
       {
