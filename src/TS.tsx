@@ -26,40 +26,66 @@ const options = [];
 const colors = ['red','green', 'blue', 'black','purple'];
   for (let index = 0; index < a.length; index++) {
     let element = a[index];
-    var item = colors[Math.floor(Math.random() * colors.length)];
+    // var item = colors[Math.floor(Math.random() * colors.length)];
+    var item = "san" + index;
     // for (var i = 2017; i <= 2050; i++) {
-    options.push(<div style={{ background: item,marginLeft:'5px', color:'white',padding:'5px',borderRadius:'5px' }}  key={index}>{element}</div>);
+
+if(index < 3){
+
+
+    options.push(<span className={item} style={{ marginLeft:'5px', color:'white',padding:'5px',borderRadius:'5px' }}  key={index}>{element}</span>);
+}
+
     // }
   }
     return (
       <>
-        <div className='random' style={{display:'inline-flex'}}>
+        <span className='random' style={{ display: '-webkit-box' }}>
   
-          {options}
-        </div>
+          <span>{options}</span>
+        </span>
       </>
     );
-
-
-
- 
   // return   sm[0];
 }
-
-
-
-  // if (smt){
-  //   return smt;
-  // }else{
-  //   return s;
-  // }
-  // }else{
-  //   return s;
-  // }
-  // Display output 
-//  console.log(s);
   return s;
 }
+
+
+
+  function working1(s: string) {
+
+    // let sm:any = s.split(', ');
+    //   let smt =  sm?.[0];
+
+    if (s) {
+      let sm: any = s.split(',');
+      let a = sm;
+      // console.log(sm?.[0]);
+      const options = [];
+      const colors = ['red', 'green', 'blue', 'black', 'purple'];
+      for (let index = 0; index < a.length; index++) {
+        let element = a[index];
+        // var item = colors[Math.floor(Math.random() * colors.length)];
+        var item =  "sand"+index;
+        // for (var i = 2017; i <= 2050; i++) {
+        if (index < 3) {
+        options.push(<span className={item} style={{  marginLeft: '5px', color: 'white', padding: '5px', borderRadius: '5px' }} key={index}>{element}</span>);
+        }
+        // }
+      }
+      return (
+        <>
+          <span className='random' style={{ display: '-webkit-box' }}>
+
+            <span>{options}</span>
+          </span>
+        </>
+      );
+      // return   sm[0];
+    }
+    return s;
+  }
 
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     //column definitions...
@@ -101,8 +127,9 @@ const colors = ['red','green', 'blue', 'black','purple'];
         // filterFn: 'between',
         filterVariant: 'text', // default
         header: 'Category',
-        size: 200,
+        layoutMode: 'grid',
         //custom conditional format and styling
+        size: 800,
         Cell: ({ cell }) => (
           
           <>
@@ -117,6 +144,30 @@ const colors = ['red','green', 'blue', 'black','purple'];
 
             {/* </Box> */}
            
+
+          </>
+        ),
+      },
+      {
+        accessorKey: 'services',
+        // filterVariant: 'range', //if not using filter modes feature, use this instead of filterFn
+        // filterFn: 'between',
+        filterVariant: 'text', // default
+        header: 'services',
+        size: 800,
+        //custom conditional format and styling
+        Cell: ({ cell }) => (
+
+          <>
+
+
+            {
+              working1(cell.getValue<string>())
+            }
+
+
+            {/* </Box> */}
+
 
           </>
         ),
@@ -154,6 +205,11 @@ const colors = ['red','green', 'blue', 'black','purple'];
   const table = useMaterialReactTable({
     columns,
     data, //10,000 rows
+    // defaultColumn: {
+    //   minSize: 20, //allow columns to get smaller than default
+    //   maxSize: 9001, //allow columns to get larger than default
+    //   size: 260, //make columns wider by default
+    // },
     defaultDisplayColumn: { enableResizing: true },
     enableBottomToolbar: true,
     enableColumnResizing: true,

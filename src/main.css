@@ -2,6 +2,102 @@ th:nth-child(3) .MuiCollapse-vertical,th:nth-child(4) .MuiCollapse-vertical,th:n
   display: none;
 }
 
+
+th:nth-child(5) .MuiCollapse-vertical .random {
+  background-color: pink!important;
+}
+.random span span{
+    /* font-size: 20px; */
+    margin-bottom: 5px;
+    
+     display: inline-block;
+}
+.san0 , .sand0{
+    background-color: rgb(61, 185, 61);
+}
+.san1 , .sand1{
+    background-color: rgb(140, 151, 64);
+}
+.san2 , .sand2{
+    background-color: rgb(0, 109, 128);
+}
+.san3 , .sand3{
+    background-color: rgb(148, 74, 87);
+}
+.san4 , .sand4{
+    background-color: rgb(34, 67, 148);
+}
+.san5 , .sand5{
+    background-color: rgb(60, 127, 138);
+}
+.san6 , .sand6{
+    background-color: rgb(135, 109, 71);
+}
+.san7 , .sand7{
+    background-color: rgb(65, 169, 65);
+}
+.san8 , .sand8{
+    background-color: rgb(175, 107, 72);
+}
+.san9 , .sand9{
+    background-color: rgb(55, 189, 189);
+}
+.san10 , .sand10{
+    background-color: rgb(64, 161, 64);
+}
+.san11 , .sand11{
+    background-color: rgb(67, 111, 159);
+}
+
+
+
+
+
+
+
+ .sand0{
+    background-color: rgb(166, 185, 61);
+}
+ .sand1{
+    background-color: rgb(136, 151, 64);
+}
+ .sand2{
+    background-color: rgb(127, 167, 174);
+}
+ .sand3{
+    background-color: rgb(148, 141, 74);
+}
+ .sand4{
+    background-color: rgb(148, 34, 80);
+}
+ .sand5{
+    background-color: rgb(60, 138, 81);
+}
+ .sand6{
+    background-color: rgb(135, 109, 71);
+}
+ .sand7{
+    background-color: rgb(65, 169, 65);
+}
+ .sand8{
+    background-color: rgb(175, 107, 72);
+}
+ .sand9{
+    background-color: rgb(55, 189, 189);
+}
+ .sand10{
+    background-color: rgb(64, 161, 64);
+}
+ .sand11{
+    background-color: rgb(67, 111, 159);
+}
+
+
+
+
+
+
+
 /* body{
 background: red;
 } */
