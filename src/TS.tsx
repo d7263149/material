@@ -21,15 +21,24 @@ if(s){
   let sm:any = s.split(',');
   let a =  sm;
   // console.log(sm?.[0]);
-
+const options = [];
+const colors = ['red','green', 'blue', 'black','purple'];
   for (let index = 0; index < a.length; index++) {
     let element = a[index];
+    var item = colors[Math.floor(Math.random() * colors.length)];
+    // for (var i = 2017; i <= 2050; i++) {
+    options.push(<div style={{ background: item,marginLeft:'5px', color:'white',padding:'5px',borderRadius:'5px' }}  key={index}>{element}</div>);
+    // }
+  }
     return (
       <>
-        {element}
+        <div className='random' style={{display:'inline-flex'}}>
+  
+          {options}
+        </div>
       </>
     );
-  }
+
 
 
  
@@ -89,22 +98,7 @@ if(s){
         Cell: ({ cell }) => (
           
           <>
-            <Box
-              component="span"
-              sx={(theme) => ({
-                backgroundColor:
-                  cell.getValue<number>() < 50_000
-                    ? theme.palette.error.dark
-                    : cell.getValue<number>() >= 50_000 &&
-                      cell.getValue<number>() < 75_000
-                      ? theme.palette.warning.dark
-                      : theme.palette.success.dark,
-                borderRadius: '0.25rem',
-                color: '#fff',
-                maxWidth: '9ch',
-                p: '0.25rem',
-              })}
-            >
+            
               {/* {cell.getValue<string>()} */}
               {/* <dd>{recipe.ingredient.join(",")}</dd> */}
 
@@ -113,7 +107,7 @@ if(s){
               }
             
 
-            </Box>
+            {/* </Box> */}
            
 
           </>

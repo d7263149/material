@@ -15,7 +15,7 @@
   "field_email": "gma@emirates.net.ae",
   "field_fax": "04-8837571",
   "field_phone": "04-8837577",
-  "category":"hello,san"
+  "category":"cat1,cat2,cat3,cat4,cat5"
  },
  {
   "directory_category": "abrasives",
@@ -32,7 +32,8 @@
   "post_title": "GOLDEN SANDS ABRASIVESLLC",
   "field_email": "aamirs@emirates.net.ae",
   "field_fax": "04-2225675",
-  "field_phone": "04-2246246"
+  "field_phone": "04-2246246",
+    "category":"cat1,cat2,cat3,cat4,cat5"
  },
  {
   "directory_category": "abrasives",
@@ -49,7 +50,8 @@
   "post_title": "MOHAMED HAREB AL OTAIBA",
   "field_email": "mhotaiba@eim.ae",
   "field_fax": "04-3413226",
-  "field_phone": "04-3415456"
+  "field_phone": "04-3415456",
+    "category":"cat8,cat9,cat10,cat11"
  },
  {
   "directory_category": "abrasives",
