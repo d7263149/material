@@ -30,7 +30,7 @@ const colors = ['red','green', 'blue', 'black','purple'];
     var item = "san" + index;
     // for (var i = 2017; i <= 2050; i++) {
 
-if(index < 3){
+if(1){
 
 
     options.push(<span className={item} style={{ marginLeft:'5px', color:'white',padding:'5px',borderRadius:'5px' }}  key={index}>{element}</span>);
@@ -69,7 +69,7 @@ if(index < 3){
         // var item = colors[Math.floor(Math.random() * colors.length)];
         var item =  "sand"+index;
         // for (var i = 2017; i <= 2050; i++) {
-        if (index < 3) {
+        if (1) {
         options.push(<span className={item} style={{  marginLeft: '5px', color: 'white', padding: '5px', borderRadius: '5px' }} key={index}>{element}</span>);
         }
         // }
@@ -125,11 +125,12 @@ if(index < 3){
         accessorKey: 'category',
         // filterVariant: 'range', //if not using filter modes feature, use this instead of filterFn
         // filterFn: 'between',
-        filterVariant: 'text', // default
+
         header: 'Category',
         layoutMode: 'grid',
         //custom conditional format and styling
         size: 800,
+        filterFn: 'includesString',
         Cell: ({ cell }) => (
           
           <>
@@ -152,9 +153,10 @@ if(index < 3){
         accessorKey: 'services',
         // filterVariant: 'range', //if not using filter modes feature, use this instead of filterFn
         // filterFn: 'between',
-        filterVariant: 'text', // default
+        // filterVariant: 'text', // default
         header: 'services',
         size: 800,
+        filterFn: 'includesString',
         //custom conditional format and styling
         Cell: ({ cell }) => (
 
